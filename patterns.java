@@ -1,7 +1,6 @@
 public class patterns {
     public static void main(String[] args) {
-        int n = 4;
-        pattern6(n);
+        pattern8(4);
     }
 
     /*
@@ -120,5 +119,36 @@ public class patterns {
             System.out.println();
         }
     }
-
+    /* pattern7 
+             1
+           2 1 2
+         3 2 1 2 3
+       4 3 2 1 2 3 4
+     5 4 3 2 1 2 3 4 5 
+    */ 
+    static void pattern7(int n){
+        for(int i=1;i<=n;i++){
+            for(int space=0;space<n-i;space++){
+                System.out.print("  ");
+            }
+            for(int j=i;j>=1;j--){
+                System.out.print(j+" ");
+            }
+            for(int j=2;j<=i;j++){
+                System.err.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+    static void pattern8(int n){
+        int originalN=n;
+        n=2*n;
+        for(int i=0;i<=n;i++){
+            for (int j=0;j<=n;j++){
+                int atEveryIndex=originalN-Math.min(Math.min(i, j), Math.min(n-i, n-j));
+                System.out.print(atEveryIndex+" ");
+            }
+            System.out.println();
+        }
+    }
 }

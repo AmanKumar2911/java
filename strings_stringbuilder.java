@@ -1,5 +1,4 @@
-import java.lang.Thread.Builder;
-import java.util.Arrays;
+
 
 public class strings_stringbuilder {
     public static void main(String[] args) {

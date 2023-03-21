@@ -55,7 +55,8 @@
 
 public class recursion{
     public static void main(String[] args) {
-        print1(1);
+        // print1(1);
+        System.out.println(fibo(20));
     }
     static void print1(int n){
         System.out.println(n);
@@ -63,5 +64,12 @@ public class recursion{
             return;
         }
         print1(n+1);
+    }
+    static int fibo(int n){
+        // base condition
+        if(n<2){
+            return n;
+        }
+        return fibo(n-1)+fibo(n-2);
     }
 }

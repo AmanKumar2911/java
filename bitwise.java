@@ -18,8 +18,17 @@ public class  bitwise{
         // int n = 10;
         // System.out.println(numberofdigits(n));
 
-        int n = 4;
-        System.out.println(pascalTrianle(n));
+        // int n = 4;
+        // System.out.println(pascalTrianle(n));
+
+
+        // int n=16;
+        // System.out.println(ismorthanOneisOne(n));
+
+
+        // System.out.println(power(6, 3));
+
+        System.out.println(getSetBit(6));
 
 
 
@@ -71,6 +80,30 @@ public class  bitwise{
      */
     static int pascalTrianle(int n){
         return 1 << (n-1);
+    }
+    static boolean ismorthanOneisOne(int n){
+        return (n & (n-1)) == 0 ? false : true;
+    }
+    static int power (int power,int base){
+        int ans = 1;
+        while(power >0 ){
+            if((power & 1) == 1){
+                ans = ans * base;
+            }
+            base*=base;
+            power = power >> 1;
+        }
+        return ans;
+    }
+    static int getSetBit(int n){
+        int counter=0;
+        while(n != 0){
+            int rmsb = (n & -n);
+            n = n-rmsb;
+            counter++;
+        }
+        return counter;
+        
     }
 
     

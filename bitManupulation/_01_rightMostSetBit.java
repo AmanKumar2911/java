@@ -8,7 +8,7 @@ public class _01_rightMostSetBit{
         int n = sc.nextInt();
 
         // writing code .
-        int rmsb=n & -n;   // because -n mean n's 2 compliment. we can also write like this n & (~n + 1)
+        int rmsb=(n & -n);   // because -n mean n's 2 compliment. we can also write like this n & (~n + 1)
         System.out.println(Integer.toBinaryString(rmsb));
         System.out.println(rmsb);
     }

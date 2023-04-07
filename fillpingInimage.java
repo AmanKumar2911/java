@@ -22,7 +22,7 @@ public class fillpingInimage {
             int e=image[i].length-1;
             while(s<=e){
                 int temp = (image[i][s] ^ 1);
-                image[i][s]=(image[i][e] ^ 1);
+                image[i][s]=(image[i][e] ^ 1);                         // new version.
                 image[i][e]=temp;
                 s++;
                 e--;
@@ -32,7 +32,7 @@ public class fillpingInimage {
         //     for(int j =0;j<image[i].length;j++){
         //         if(image[i][j]==0){
         //             image[i][j]=1;
-        //         }
+        //         }                                                       // this not needed (old version)
         //         else{
         //             image[i][j]=0;
         //         }

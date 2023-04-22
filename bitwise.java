@@ -105,6 +105,7 @@ public class  bitwise{
         return counter;
         
     }
+    
 
     
 
